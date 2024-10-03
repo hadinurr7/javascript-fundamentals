@@ -1,0 +1,7 @@
+// MEMBUAT FILE CONFIG AGAR DAPAT MENJALANKAN COMMAND replaceAll
+
+{
+    "compilerOptions": {
+        "target" : "ES2021"
+    }
+}
