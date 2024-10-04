@@ -18,6 +18,8 @@ Write a code to check whether the number is odd or even
 ○ Example: 15 → 610 
 */
 
+
+
 // ======== NUMBER 1 =============
 //psudocode Nomor 1
 // 1. membuat variable bernama number bernilai 25
@@ -32,6 +34,8 @@ if (number1 % 2 === 0) {
 } else {
   console.log(`${number1} is odd number`);
 }
+
+
 
 // ========== NUMBER 2 ============
 // psudocode Nomor 2 
@@ -62,20 +66,39 @@ if (divider === 2) {
 }
 // ==========================================
 // CARA B
-const number: number = 6;
+const numberCek: number = 6;
 let isPrime: boolean = true;
 
-for (let i = 1; i <= number; i++) {
-  if (i !== 1 && i !== number && number % i === 0) {
+for (let i = 1; i <= numberCek; i++) {
+  if (i !== 1 && i !== numberCek && numberCek % i === 0) {
     console.log(i);
     isPrime = false;
   }
 }
 if (isPrime) {
-  console.log(`${number} is prime number`);
+  console.log(`${numberCek} is prime number`);
 } else {
-  console.log(`${number} is not Prime number`);
+  console.log(`${numberCek} is not Prime number`);
 }
+
+// CARA C
+
+// const num: number = 6;
+// let isPrime: boolean = true;
+
+// if (num <= 1) {
+//   isPrime = false;
+// } else {
+//   for (let i = 2; i < num; i++) {
+//     if (num % 2 === 0) {
+//       isPrime = false;
+//       break;
+//     }
+//   }
+// }
+
+
+
 
 // ========= NUMBER 3: ==========
 // Psudocode nomor 3
@@ -84,35 +107,59 @@ if (isPrime) {
 // 2. membuat variable bernilai 0 sebagai total nilai dari 1-N
 // 3. loop 
 
-const number4: number = 3;
+const number4: number = 5;
 let sum: number = 0;
+let messagePlus: string = "";
 
 for (let i = 1; i <= number4; i++) {
   sum += i;
+
+  if (i === number4) {
+    messagePlus += i + " ";
+  } else {
+    messagePlus += i + " + ";
+  }
 }
+
 console.log(sum);
+console.log(`${messagePlus} = ${sum}`);
+
+
+
+
 
 //======= NUMBER 4 ==============
 
 // A
-const number6: number = 6;
+const number6: number = 4;
 let factNumb: number = 1;
-for (let i = 1; i <= number6; i++) {
+let messagePlus2: string = ""
+
+for (let i = number6 ; i >= 1; i--) {
   factNumb *= i; 
+
+  if (i === 1) {
+    messagePlus2 += i + " ";
+  } else {
+    messagePlus2 += i + " x ";
+  }
 }
 console.log(factNumb);
+console.log( `${messagePlus2} = ${factNumb}`);
+
+
+
+
 
 // ========= NUMBER 5 ==========
 
 const fn = 15;
 let n1 = 0;
 let n2 = 1;
-let nextFib = 0;
 
 for (let i = 0; i < fn; i++) {
+  let nextFib: number = n1+n2
   n1 = n2;
   n2 = nextFib;
-  nextFib = n1 + n2;
 }
-console.log(nextFib);
-
+console.log(n1);
