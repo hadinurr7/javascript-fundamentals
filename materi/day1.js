@@ -37,6 +37,7 @@ console.log(person4);
 // Data Types
 // 1. Primitive data types : string, number, boolean, null & undefined
 // 2. Non primitive data types : object dan array
+// 3. case sensitif
 
 // string 		: data huruf diawali dan diakhiri dengan tanda “, ex : “Hello World”
 // number 		: berisi data angka, ex : 1, 2, 3 

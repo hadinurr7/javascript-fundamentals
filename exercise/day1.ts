@@ -22,97 +22,74 @@ Write a code to convert days to years, months and days (Notes: 1 year : 365 days
 //======= ANSWER
 
 //NUMBER 1
- const rectangleLenght: number = 5;
- const rectangleWidth: number = 3;
- const area: number = rectangleLenght * rectangleWidth;
+const rectangleLenght: number = 5;
+const rectangleWidth: number = 3;
+const area: number = rectangleLenght * rectangleWidth;
 
- console.log(area);
+console.log(area);
 
- //NUMBER 2
- const rectangleLenght2: number = 5;
- const rectangleWidth2: number = 3;
- const perimeter: number = 2 * (rectangleLenght2+rectangleWidth2);
+//NUMBER 2
+const rectangleLenght2: number = 5;
+const rectangleWidth2: number = 3;
+const perimeter: number = 2 * (rectangleLenght2 + rectangleWidth2);
 
- console.log(perimeter);
+console.log(perimeter);
 
- //NUMBER 3
+//NUMBER 3
 const circleRadius: number = 5;
-const pi: number = Math.PI // Pi 3.14
-const circleDiameter: number = circleRadius*2;
-const circleCircumference: number = pi*(circleRadius*2);
-const circleArea: number = pi*(5 ** 2 )
+const pi: number = Math.PI; // Pi 3.14
+const circleDiameter: number = circleRadius * 2;
+const circleCircumference: number = pi * (circleRadius * 2);
+const circleArea: number = pi * 5 ** 2;
 
 console.log(circleDiameter);
 console.log(circleCircumference);
 console.log(circleArea);
 
-console.log(`diameter ${circleDiameter}, circumference ${circleCircumference}, area${circleArea}`);
-
+console.log(
+  `diameter ${circleDiameter}, circumference ${circleCircumference}, area${circleArea}`
+);
 
 //NUMBER 4
 const angleA: number = 80;
 const angleB: number = 65;
 const totalAngle: number = 180;
 const angleC: number = totalAngle - (angleA + angleB);
-
+// result
 console.log(angleC);
 
+// NUMBER 5
+const hari: number = 400;
+// mencari ada berapa tahun dalam 400 hari
+const tahun: number = Math.floor(hari / 365);
+// mencari berapa bulan dari sisa hari (400 % 365)
+const bulan: number = Math.floor((hari % 365) / 30);
+// mencari berapa sisa hari dari (400 % 365) % 30)
+const tanggal: number = Math.floor((hari % 365) % 30);
 
-//NUMBER 5
-// const daysOfYear: number = 365;
-// const daysOfMonths: number = 30;
-// const days: number = 400;
+// Check
+console.log(tahun);
+console.log(bulan);
+console.log(tanggal);
 
-// const yearsFromDays: number = days / daysOfYear;    // mencari ada berapa tahun dalam 400 hari
-// console.log(Math.floor(yearsFromDays));             // Math.floor untuk pembulatan ke bawah agar mendapat angkat bulat 1
-// const remainingDays1: number = days % daysOfYear;
-// console.log(remainingDays1);
-
-// const monthsFromDays: number = remainingDays1 / daysOfMonths;
-// console.log(Math.floor(monthsFromDays));
-
-// const remainingDays2: number = remainingDays1 % 30;
-// console.log(remainingDays2);
-
-// console.log(`${Math.floor(yearsFromDays)} years, ${Math.floor(monthsFromDays)} month, ${Math.floor(remainingDays2)} Days`);
-
-
-// REVISI NUMBER 5
-
-// A
-const hari: number = 400
-const tahun: number = Math.floor(hari / 365)
-const bulan: number = Math.floor((hari % 365)/30)
-const tanggal: number = Math.floor((hari % 365) %30)
-
+// result
 console.log(`${tahun} years ${bulan} months ${tanggal} days`);
-
-// B
-const totalDays: number = 366
-const yearsOfDays: number = Math.floor((totalDays / 365))
-const monthsOfYears: number = Math.floor((totalDays % 365) / 30)
-const daysRemain: number =Math.floor((totalDays % 365) % 30)
-
-console.log(`${yearsOfDays} years ${monthsOfYears} months ${daysRemain} days`);
-
 
 // NUMBER 6
 const date1 = new Date("2022-01-20");
 const date2 = new Date("2022-01-22");
 
-// Calculate time diff to miliseconds
-const timeDifference: number =Math.abs(date1.getTime() - date2.getTime());
-
-//Convert the time difference from milliseconds to days
+// mengubah hari dalam bentuk millisecconds
+const convertTimeDifference: number = date1.getTime() - date2.getTime();
+// mengubah - menjadi +
+const timeDifference: number = Math.abs(convertTimeDifference);
+// mengubah perbedaan waktu dalam bentuk milliseconds
 const dayDifference: number = timeDifference / (1000 * 3600 * 24);
+
+// check
+console.log(date1.getTime());
+console.log(date2.getTime());
+console.log(timeDifference);
+console.log(dayDifference);
+// result
 console.log(`Perbedaan hari antara date 1 & date 2 adalah ${dayDifference}`);
-
-
-
-
-
-
-
-
-
-
