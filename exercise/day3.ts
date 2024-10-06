@@ -144,9 +144,11 @@ const middle: number = num1 + num2 + num3 - smallest - largest;
 
 const input1: any = "";
 
+console.log(typeof input1);
+
 if (typeof input1 === "string") {
   console.log(1);
-} else if (typeof input1 === "string") {
+} else if (typeof input1 === "number") {
   console.log(2);
 } else {
   console.log(3);
