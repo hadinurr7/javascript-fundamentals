@@ -33,7 +33,7 @@ function greet() {
   return hello;
 }
 greet(); // ini bisa di eksekusi tanpa menggunakan return
-console.log(greet()); // ini hanya bisa di eksekusi jika ada return
+//console.log(greet()); // ini hanya bisa di eksekusi jika ada return
 
 //console.log(hello); // ini gak bakalan bisa
 
@@ -145,3 +145,4 @@ const square3 = (number: number) => {
 
 // kalo misalnya cuman 1 line bisa di bikkin kaya gini 👇
 const square4 = (number: number) => number * number;
+
