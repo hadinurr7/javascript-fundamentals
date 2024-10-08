@@ -15,7 +15,6 @@ function getNumbers(target: number, arrays: number[]) {
 
     console.log(arrays.length);
     
-
     for (let j = i ; j < arrays.length; j++) {
 
       if (arrays[i] + arrays[j] === target) {
